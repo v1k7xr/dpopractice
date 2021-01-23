@@ -20,5 +20,11 @@ npm run build
 npm run lint
 ```
 
+### Add file 'tokens.js' to store
+```
+add line: 
+export const api_key = 'your api key';
+```
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).

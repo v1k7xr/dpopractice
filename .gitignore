@@ -2,6 +2,7 @@
 node_modules
 /dist
 
+src/store/tokens.js
 
 # local env files
 .env.local
