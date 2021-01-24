@@ -126,15 +126,15 @@ export default {
   methods: {
     updateResumeTemplate: function (event) {
 
-      // if(!this.checkCorrectEmail()) {
-      //   alert('Incorrect email');
-      //   return;
-      // }
+      if(!this.checkCorrectEmail()) {
+        alert('Incorrect email');
+        return;
+      }
 
-      // if (!this.checkCorrectPhone()) {
-      //   alert('Incorrect phone');
-      //   return;
-      // }
+      if (!this.checkCorrectPhone()) {
+        alert('Incorrect phone');
+        return;
+      }
 
       console.log(api_key);
 
@@ -154,9 +154,9 @@ export default {
 
     checkCorrectEmail : function() {
 
-      if (!this.email) {
+      if (!this.vModelEmail) {
         return false;
-      } else if (!this.validEmail(this.vModelEmail)) {
+      } else if (!this.regEmail.test(this.vModelEmail)) {
         return false;
       }
 
